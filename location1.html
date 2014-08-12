@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <title>Jellycoaster</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut  icon" href="fav/favicon.ico"/>
+    <script>
+        function star(){
+            /* 1번째 별 */
+            var str = "<table>";
+            for(i=0;i<5; i++){
+                str += "<tr>";
+                for(j=0;j<5-i;j++)
+                    str += "<td>*</td>";
+                str +="</tr>";
+            }
+            str +="</table>";
+            document.getElementById('STAR1').innerHTML = str;
+
+            /* 2번째 별 */
+            str = "<table>";
+            for(i=0; i<5; i++){
+                str += "<tr>";
+                for(j=5; j>=5-i; j--)
+                    str += "<td>*</td>";
+                str += "</tr>";
+            }
+            str += "</table>";
+            document.getElementById('STAR2').innerHTML = str;
+
+            /* 3번째 별 */
+            str = "<table>";
+            for(i=0; i<5; i++){
+                str += "<tr>";
+                for(j=5; j>5-i; j--)
+                    str += "<td> </td>";
+                for(j=0; j<5-i; j++)
+                    str += "<td>*</td>";
+                str += "</tr>";
+            }
+            str += "</table>";
+            document.getElementById('STAR3').innerHTML = str;
+
+            /*4번째 별 */
+            str = "<table>";
+            for(i=0; i<5; i++){
+                str += "<tr>";
+                for(j=0; j<4-i; j++)
+                    str += "<td> </td>";
+                for(j=5; j>=5-i; j--)
+                    str += "<td>*</td>";
+                str += "</tr>";
+            }
+            str += "</table>";
+            document.getElementById('STAR4').innerHTML = str;
+        }
+    </script>
+</head>
+<body onload="star()">
+    <div class="container">
+        <div class="jumbotron">
+            <header>
+                <hgroup>
+                    <h1 class="title">Jellycoaster</h1>
+                    <p class = "subtitle"><small>과제 - 장태근</small></p>
+                </hgroup>
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <nav>
+                 <ul class="nav nav-sidebar">
+                    <li><a href="index.html">커버페이지</a></li>
+                    <li class="active"><a href="location1.html">별을 찍어보자</a></li>
+                    <li><a href="location2.html">안녕하세요</a></li>
+                    <li><a href="location3.html">체크박스</a></li>
+                    <li><a href="location4.html">이미지 홀짝</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-9">
+            <article>
+                <h2>별을 찍어보자</h2>
+                <div class="col-xs-6">
+                <table class= "table table-bordered">
+                    <tr>
+                        <td class="table_content"><span id='STAR1'></span></td>
+                        <td class="table_content"><span id='STAR2'></span></td>
+                    </tr>
+                    <tr>
+                        <td class="table_content"><span id='STAR3'></span></td>
+                        <td class="table_content"><span id='STAR4'></span></td>
+                    </tr>
+                </table>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

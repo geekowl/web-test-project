@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.container{
+  font-family : NanumGothic,sans-serif;
+  font-size:16px;
+  background:white;
+}
+hgroup{
+  text-align : center;
+}
+h2{
+  border-bottom:1px solid gray;
+  padding-bottom : 20px;
+  text-align : center;
+  font-weight : bold;
+}
+h3{
+  font-weight : bold;
+  padding-bottom : 10px;
+  border-bottom : 1px dotted gray;
+}
+.table_cotent
+{
+  padding : 20px;
+}
+.img-rounded
+{
+  width : 120px;
+  height :120px;
+}
+/*
+* Side-bar
+*/
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #099345;
+}
+ body{
+  padding-top : 30px;
+  background:#00968a;
+ }
