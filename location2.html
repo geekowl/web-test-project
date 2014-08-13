@@ -8,12 +8,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut  icon" href="fav/favicon.ico"/>
-    <script>
-        function hello(){
-            var output= document.getElementById('output');
-            output.innerHTML += document.getElementById('input').value +"님 안녕하세요?\r\n";
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -43,7 +37,7 @@
                     <form class="form-inline" role="form">
                         <div class="form-group">
                             <input type="text"  class="form-control"  placeholder ="이름을 입력해주세요" id='input'>
-                            <input type="button" class="btn btn-default" value='인사' onclick='hello()'>
+                            <input type="button" id="btn" class="btn btn-default" value='인사'>
                         </div>
                     </form>
                     <textarea id = 'output' class="form-control" rows="8"></textarea></br>
@@ -52,6 +46,13 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $('#btn').click(function(){
+            var name=$('#input').val();
+            var str=$('textarea').val();
+            $('#output').text(str+name+'님 안녕하세요?'+'\r');
+        });
+    </script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

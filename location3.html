@@ -65,12 +65,21 @@
                     <img class="img-rounded" src="img/4.png"/>
                     <img class="img-rounded" src="img/5.png"/>
                 </div>
-                <input type="button" class="btn btn-default" value="체크박스 선택" onclick = "getElements()">
+                <input type="button" id="btn" class="btn btn-default" value="체크박스 선택">
             </article>
         </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $('#btn').click(function(){
+        var chk=$('.check:eq(2)').is(":checked");
+        if(chk)
+            alert('성공 :  통과');
+        else
+            alert('실패 : 3번을 선택해주세요');
+    });
+</script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

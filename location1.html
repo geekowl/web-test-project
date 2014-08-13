@@ -8,59 +8,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut  icon" href="fav/favicon.ico"/>
-    <script>
-        function star(){
-            /* 1번째 별 */
-            var str = "<table>";
-            for(i=0;i<5; i++){
-                str += "<tr>";
-                for(j=0;j<5-i;j++)
-                    str += "<td>*</td>";
-                str +="</tr>";
-            }
-            str +="</table>";
-            document.getElementById('STAR1').innerHTML = str;
-
-            /* 2번째 별 */
-            str = "<table>";
-            for(i=0; i<5; i++){
-                str += "<tr>";
-                for(j=5; j>=5-i; j--)
-                    str += "<td>*</td>";
-                str += "</tr>";
-            }
-            str += "</table>";
-            document.getElementById('STAR2').innerHTML = str;
-
-            /* 3번째 별 */
-            str = "<table>";
-            for(i=0; i<5; i++){
-                str += "<tr>";
-                for(j=5; j>5-i; j--)
-                    str += "<td> </td>";
-                for(j=0; j<5-i; j++)
-                    str += "<td>*</td>";
-                str += "</tr>";
-            }
-            str += "</table>";
-            document.getElementById('STAR3').innerHTML = str;
-
-            /*4번째 별 */
-            str = "<table>";
-            for(i=0; i<5; i++){
-                str += "<tr>";
-                for(j=0; j<4-i; j++)
-                    str += "<td> </td>";
-                for(j=5; j>=5-i; j--)
-                    str += "<td>*</td>";
-                str += "</tr>";
-            }
-            str += "</table>";
-            document.getElementById('STAR4').innerHTML = str;
-        }
-    </script>
 </head>
-<body onload="star()">
+<body>
     <div class="container">
         <div class="jumbotron">
             <header>
@@ -102,6 +51,57 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        /* 1번째 별 */
+        var str = "<table>";
+        for(i=0;i<5; i++){
+            str += "<tr>";
+                for(j=0;j<5-i;j++)
+                    str += "<td>*</td>";
+                str +="</tr>";
+            }
+        str +="</table>";
+        $('#STAR1').html(str);
+
+        /* 2번째 별 */
+        str = "<table>";
+        for(i=0; i<5; i++){
+            str += "<tr>";
+                for(j=5; j>=5-i; j--)
+                     str += "<td>*</td>";
+                str += "</tr>";
+            }
+        str += "</table>";
+        $('#STAR2').html(str);
+
+        /* 3번째 별 */
+        str = "<table>";
+        for(i=0; i<5; i++){
+            str += "<tr>";
+                for(j=5; j>5-i; j--)
+                    str += "<td> </td>";
+                for(j=0; j<5-i; j++)
+                    str += "<td>*</td>";
+                str += "</tr>";
+        }
+        str += "</table>";
+        $('#STAR3').html(str);
+
+        /*4번째 별 */
+        str = "<table>";
+        for(i=0; i<5; i++){
+            str += "<tr>";
+                for(j=0; j<4-i; j++)
+                    str += "<td> </td>";
+                for(j=5; j>=5-i; j--)
+                    str += "<td>*</td>";
+                str += "</tr>";
+        }
+         str += "</table>";
+         $('#STAR4').html(str);
+    });
+</script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
