@@ -1,2 +1,2 @@
-jelly.project
+web-test-project
 =============
